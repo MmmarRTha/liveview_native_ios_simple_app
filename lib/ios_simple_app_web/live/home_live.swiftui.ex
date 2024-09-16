@@ -3,12 +3,7 @@ defmodule IosSimpleAppWeb.HomeLive.SwiftUI do
 
   def render(assigns, _interface) do
     ~LVN"""
-    VStack {
-      Text("Home, Hello World SwiftUI")
-      Button("Increment") {
-        self.send_event("increment")
-      }
-    }
+    <Text>Hello LiveView Native SwiftUI</Text>
     """
   end
 end
