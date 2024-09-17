@@ -3,7 +3,7 @@ defmodule IosSimpleAppWeb.HomeLive.SwiftUI do
 
   def render(assigns, _interface) do
     ~LVN"""
-    <Text>Hello LiveView Native SwiftUI</Text>
+    <Text>Hello iOS from LiveView Native SwiftUI 🤩</Text>
     """
   end
 end

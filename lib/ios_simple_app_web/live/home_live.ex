@@ -9,7 +9,7 @@ defmodule IosSimpleAppWeb.HomeLive do
     def render(assigns) do
       ~H"""
       <div>
-        <h1>Home, Hello World html</h1>
+        <h1>Hello World html from Phoenix LiveView </h1>
       </div>
       """
     end
