@@ -1,0 +1,6 @@
+<VStack>
+    <Text><%= @counter %></Text>
+    <Button phx-click="increment">
+        + 1
+    </Button>
+</VStack>

@@ -50,7 +50,7 @@ config :ios_simple_app, IosSimpleAppWeb.Endpoint,
       ~r"priv/gettext/.*(po)$",
       ~r"lib/ios_simple_app_web/(controllers|live|components)/.*(ex|heex)$",
       ~r"lib/ios_simple_app_web/(live|components)/.*neex$",
-      ~r"lib/ios_simple_app_web/styles/*.ex$",
+      ~r"lib/ios_simple_app_web/styles/.*ex$",
       ~r"priv/static/*.styles$"
     ]
   ]

@@ -2,20 +2,27 @@ defmodule IosSimpleAppWeb.HomeLive do
     use IosSimpleAppWeb, :live_view
     use IosSimpleAppNative, :live_view
 
+    @impl true
     def mount(_params, _session, socket) do
         {:ok, assign(socket, :counter, 0)}
     end
 
+    @impl true
     def render(assigns) do
       ~H"""
-      <div>
-        <h1>Hello World html from Phoenix LiveView </h1>
+      <div class="text-center text-9xl">
+        <%= @counter %>
+      </div>
+      <div class="flex flex-col items-center">
+        <button class="px-4 py-1 text-2xl font-bold text-white bg-blue-500 rounded hover:bg-blue-700" phx-click="increment">
+            +
+        </button>
       </div>
       """
     end
 
+    @impl true
     def handle_event("increment", _params, socket) do
-        counter = socket.assigns.counter
-        {:noreply, assign(socket, :counter, counter + 1)}
+        {:noreply, assign(socket, :counter, socket.assigns.counter + 1)}
     end
 end
