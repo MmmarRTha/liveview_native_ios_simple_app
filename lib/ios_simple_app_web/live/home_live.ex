@@ -25,4 +25,16 @@ defmodule IosSimpleAppWeb.HomeLive do
     def handle_event("increment", _params, socket) do
         {:noreply, assign(socket, :counter, socket.assigns.counter + 1)}
     end
+
+    @impl true
+    def handle_event("decrement", _params, socket) do
+        {:noreply, assign(socket, :counter, socket.assigns.counter - 1)}
+    end
+
+    @impl true
+    def handle_event("increment-by", %{"by" => value}, socket) do
+        {value, _} = Integer.parse(value)
+        {:noreply, assign(socket, :counter, socket.assigns.counter + value)}
+    end
+
 end

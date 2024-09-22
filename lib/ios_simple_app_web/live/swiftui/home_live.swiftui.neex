@@ -1,6 +1,67 @@
-<VStack>
-    <Text><%= @counter %></Text>
-    <Button phx-click="increment">
-        + 1
-    </Button>
-</VStack>
+<ZStack>
+    <Rectangle style="foregroundStyle(.black); ignoreSafeArea(.all);" />
+    <VStack spacing="16">
+        <Text style={"""
+            font(.system(size: 300, weight: .light, design: .monospaced));
+            foregroundStyle(.linearGradient(colors: [.purple, .green], startPoint: .top, endPoint: .bottom));
+            minimumScaleFactor(0.5);
+            lineLimit(1);
+            padding(.bottom, 20);
+        """}><%= @counter %></Text>
+        <HStack spacing="8">
+            <Button 
+                phx-click="increment-by" 
+                phx-value-by="-10"
+                style={"""
+                    font(.system(size: 16, weight: .bold, design: .rounded));
+                    padding(10);
+                    background(Color.red.opacity(0.7));
+                    foregroundStyle(.white);
+                    clipShape(.rect(cornerRadius: 8))
+                """}
+                >
+                - 10
+            </Button>
+            <Button 
+                phx-click="increment-by"
+                phx-value-by="-1"
+                style={"""
+                    font(.system(size: 16, weight: .bold, design: .rounded));
+                    padding(10);
+                    background(Color.orange.opacity(0.7));
+                    foregroundStyle(.white);
+                    clipShape(.rect(cornerRadius: 8))
+                """}
+                >
+                - 1
+            </Button>
+            <Button 
+                phx-click="increment-by"
+                phx-value-by="1"
+                style={"""
+                    font(.system(size: 16, weight: .bold, design: .rounded));
+                    padding(10);
+                    background(Color.green.opacity(0.7));
+                    foregroundStyle(.white);
+                    clipShape(.rect(cornerRadius: 8))
+                """}
+                >
+                + 1
+            </Button>
+            <Button 
+                phx-click="increment-by"
+                phx-value-by="10"
+                style={"""
+                    font(.system(size: 16, weight: .bold, design: .rounded));
+                    padding(10);
+                    background(Color.blue.opacity(0.7));
+                    foregroundStyle(.white);
+                    clipShape(.rect(cornerRadius: 8))
+                """}
+                >
+                + 10
+            </Button>
+        </HStack>
+    </VStack>
+</ZStack>
+
