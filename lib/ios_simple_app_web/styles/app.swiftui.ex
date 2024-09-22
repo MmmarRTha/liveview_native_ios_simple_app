@@ -5,6 +5,13 @@ defmodule IosSimpleAppWeb.Styles.App.SwiftUI do
   # Refer to your client's documentation on what the proper syntax
   # is for defining rules within classes
   ~SHEET"""
+  "button-" <> color do
+    font(.system(size: 16, weight: .bold, design: .rounded))
+    padding(10)
+    background(Color.{color}.opacity(0.7))
+    foregroundStyle(.white)
+    clipShape(.rect(cornerRadius: 8))
+  end
   """
 
   # If you need to have greater control over how your style rules are created
