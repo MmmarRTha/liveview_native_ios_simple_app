@@ -1,4 +1,4 @@
-defmodule IosSimpleAppWeb.Styles.App.SwiftUI do
+defmodule IosSimpleAppWeb.Styles.App.SwiftUI.MacOS do
   use LiveViewNative.Stylesheet, :swiftui
 
   # Add your styles here
@@ -29,6 +29,7 @@ defmodule IosSimpleAppWeb.Styles.App.SwiftUI do
    end
 
  "button-" <> color do
+   buttonStyle(.plain)
    font(.system(size: 16, weight: .bold, design: .monospaced))
    frame(width: 50, height: 50)
    foregroundStyle(
